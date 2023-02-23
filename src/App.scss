@@ -28,3 +28,37 @@ body {
     color: #ffffff;
   }
 }
+
+.weather {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+
+  .weather-title,
+  .weather-vis,
+  .temp-max,
+  .temp-min {
+    display: flex;
+
+    .weather-label {
+      margin-right: 4px;
+    }
+
+    .weather-value {
+      margin-right: 4px;
+      color: skyblue;
+    }
+  }
+
+  .right {
+    margin-right: 12px;
+  }
+
+  .weather-tips {
+    margin-left: 12px;
+    font-size: 12px;
+  }
+}

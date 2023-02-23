@@ -1,6 +1,6 @@
 
 export const Menus = [{
-  key: 'home',
+  key: 'homepage',
   label: '首页',
   path: '/homePage',
 }, {
