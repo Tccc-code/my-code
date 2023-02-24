@@ -40,6 +40,7 @@ const HomePage: React.FC<{}> = () => {
       <div style={{ width: 20, height: 12 }} />
       <div>读取电子表格(excel等)</div>
       <div><a href="https://gitcode.net/mirrors/rockboom/sheetjs-docs-zh-cn?utm_source=csdn_github_accelerator" target='_blank'>https://gitcode.net/mirrors/rockboom/sheetjs-docs-zh-cn?utm_source=csdn_github_accelerator</a></div>
+      <div>HomePage</div>
       <div className="icp">
         <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2023003826号</a>
       </div>
