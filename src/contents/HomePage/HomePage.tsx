@@ -42,9 +42,13 @@ const HomePage: React.FC<{}> = () => {
       <div><a href="https://gitcode.net/mirrors/rockboom/sheetjs-docs-zh-cn?utm_source=csdn_github_accelerator" target='_blank'>https://gitcode.net/mirrors/rockboom/sheetjs-docs-zh-cn?utm_source=csdn_github_accelerator</a></div>
       <div>HomePage</div>
       <div className="icp">
+        <a style={{ display: 'flex', marginRight: 12 }} target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33011002016984">
+          <img src="../../../public/beian.png" style={{ marginRight: 4 }} />
+          <div>浙公网安备 33011002016984号</div>
+        </a>
         <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2023003826号</a>
       </div>
-    </div>
+    </div >
   );
 }
 
