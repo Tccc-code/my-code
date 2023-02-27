@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLocation } from "react";
+import React, { useState } from "react";
 
 import './CardDemo.scss';
 
