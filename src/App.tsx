@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import { Layout, Menu, theme } from 'antd';
 import Moment from 'moment';
 import { Menus } from '../menus';
@@ -82,7 +82,6 @@ const App: React.FC = () => {
           mode="inline"
           openKeys={openKeys}
           onOpenChange={onOpenChange}
-          defaultSelectedKeys={['homepage']}
           items={Menus}
         />
       </Sider>
