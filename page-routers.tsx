@@ -1,5 +1,6 @@
-import CardDemo from "./src/contents/CardDemo/CardDemo"
-import HomePage from "./src/contents/HomePage/HomePage"
+import CardDemo from "./src/contents/CardDemo/CardDemo";
+import HomePage from "./src/contents/HomePage/HomePage";
+import SprayDemo from "./src/contents/SprayDemo/SprayDemo";
 
 export const PageRouters = [{
   path: '/homePage',
@@ -7,4 +8,7 @@ export const PageRouters = [{
 }, {
   path: '/cardDemo',
   element: CardDemo
+}, {
+  path: '/sprayDemo',
+  element: SprayDemo,
 }]

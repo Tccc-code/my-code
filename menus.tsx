@@ -10,5 +10,9 @@ export const Menus = [{
     key: 'card-demo',
     path: '/cardDemo',
     label: '卡牌翻转Demo'
+  }, {
+    key: 'spray-demo',
+    path: '/sprayDemo',
+    label: '粒子喷漆Demo'
   }]
 }]
