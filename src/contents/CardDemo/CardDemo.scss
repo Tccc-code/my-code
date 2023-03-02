@@ -1,6 +1,13 @@
 .card-demo {
   width: 100%;
 
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 24px;
+    text-align: center;
+  }
+
   .card-box {
     position: relative;
     width: 150px;

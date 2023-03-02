@@ -1,0 +1,13 @@
+.line-demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 24px;
+    text-align: center;
+  }
+}

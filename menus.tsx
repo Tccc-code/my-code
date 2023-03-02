@@ -13,6 +13,10 @@ export const Menus = [{
   }, {
     key: 'spray-demo',
     path: '/sprayDemo',
-    label: '粒子喷漆Demo'
+    label: '粒子喷射Demo'
+  }, {
+    key: 'line-demo',
+    path: '/lineDemo',
+    label: '线性动画Demo'
   }]
 }]

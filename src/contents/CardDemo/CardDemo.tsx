@@ -7,6 +7,7 @@ const CardDemo: React.FC<{}> = () => {
 
   return (
     <div className="card-demo">
+      <div className="title">卡片翻转</div>
       <div className="card-box">
         <div className="card-front" style={{ transform: cardType === 'front' ? 'rotateY(0)' : 'rotateY(180deg)' }} onClick={() => { setCardType('back') }}>正面</div>
         <div className="card-back" style={{ transform: cardType === 'front' ? 'rotateY(180deg)' : 'rotateY(0)' }} onClick={() => { setCardType('front') }}>背面</div>

@@ -35,71 +35,73 @@ interface IDotItem {
   lineY: number,
 }
 import React, { useRef, useEffect, useState } from 'react';
+import './SprayDemo.scss';
+
 const mockPointData: Array<IPointData> = [
   {
     sx: 0,
-    sy: 30,
+    sy: 25,
     ex: 1350,
     ey: 30,
     cx: 1350,
     cy: 30,
-    width: 80,
-    total: 400,
+    width: 100,
+    total: 500,
     dots: [],
     color: "rgb(82,192,26)",
-    density: 5
+    density: 7
   },
   {
     sx: 0,
     sy: 25,
     ex: 130,
-    ey: 185,
+    ey: 600,
     cx: 130,
     cy: 50,
-    width: 60,
-    total: 300,
+    width: 100,
+    total: 500,
     dots: [],
     color: "rgb(114,46,209)",
-    density: 5
+    density: 7
   },
   {
     sx: 0,
     sy: 25,
     ex: 400,
-    ey: 185,
+    ey: 600,
     cx: 400,
     cy: 50,
-    width: 60,
-    total: 300,
+    width: 100,
+    total: 500,
     dots: [],
     color: "rgb(135,206,235)",
-    density: 5
+    density: 7
   },
   {
     sx: 0,
     sy: 25,
-    ex: 671,
-    ey: 185,
+    ex: 700,
+    ey: 600,
     cx: 671,
     cy: 50,
-    width: 60,
-    total: 300,
+    width: 100,
+    total: 500,
     dots: [],
     color: "rgb(255,165,23)",
-    density: 5
+    density: 7
   },
   {
     sx: 0,
     sy: 25,
-    ex: 927,
-    ey: 185,
+    ex: 900,
+    ey: 600,
     cx: 927,
     cy: 50,
-    width: 60,
-    total: 300,
+    width: 100,
+    total: 500,
     dots: [],
-    color: "rgb(255,192,203)",
-    density: 5
+    color: "rgb(165,50,50)",
+    density: 7
   }
 ]
 const SprayDemo: React.FC<{
@@ -160,7 +162,7 @@ const SprayDemo: React.FC<{
 
   const dotDraw = () => {
     const canvasCtx = canvasRef?.current?.getContext('2d');
-    canvasCtx?.clearRect(0, 0, 800, 300);
+    canvasCtx?.clearRect(0, 0, 1000, 600);
     const newData = data?.map((item) => {
       const {
         dots = [], sy, sx, ex, ey, cx, cy,
@@ -169,7 +171,7 @@ const SprayDemo: React.FC<{
       canvasCtx?.beginPath();
       canvasCtx?.moveTo(sx, sy);
       canvasCtx?.quadraticCurveTo(cx, cy, ex, ey);
-      canvasCtx?.stroke();
+      // canvasCtx?.stroke();
       newDots = newDots.filter((dotItem: IDotItem) => dotItem?.t < item?.total);
       for (let i = 0; i < 5;) {
         newDots.push({
@@ -187,8 +189,11 @@ const SprayDemo: React.FC<{
     setTimeout(() => requestAnimationFrame(dotDraw), 500);
   }, [])
   return (
-    <div className={extraClass} style={{ width: 800, height: 300 }}>
-      <canvas ref={canvasRef} width={800} height={300} id="myCanvas" />
+    <div className='spray-demo'>
+      <div className='title'>粒子喷射</div>
+      <div className={extraClass} style={{ width: 1000, height: 600 }}>
+        <canvas ref={canvasRef} width={1000} height={600} id="myCanvas" />
+      </div>
     </div>
   );
 }
