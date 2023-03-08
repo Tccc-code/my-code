@@ -2,6 +2,7 @@ import CardDemo from "./src/contents/CardDemo/CardDemo";
 import HomePage from "./src/contents/HomePage/HomePage";
 import LineDemo from "./src/contents/LineDemo/LineDemo";
 import SprayDemo from "./src/contents/SprayDemo/SprayDemo";
+import TestDemo from "./src/contents/TestDemo/TestDemo";
 
 export const PageRouters = [{
   path: '/homePage',
@@ -15,4 +16,7 @@ export const PageRouters = [{
 }, {
   path: '/lineDemo',
   element: LineDemo,
+}, {
+  path: '/testDemo',
+  element: TestDemo,
 }]

@@ -18,5 +18,9 @@ export const Menus = [{
     key: 'line-demo',
     path: '/lineDemo',
     label: '线性动画Demo'
+  }, {
+    key: 'test-demo',
+    path: '/testDemo',
+    label: '检测动画Demo'
   }]
 }]
