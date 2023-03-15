@@ -26,7 +26,6 @@ const TestDemo: React.FC<{}> = () => {
       if (startPoint >= (myCanvas.height + 20)) {
         startPoint = 0;
       }
-      console.log(startPoint);
       // 请求动画比setTime更优势 
       // 链接https://blog.csdn.net/vhwfr2u02q/article/details/79492303
       requestAnimationFrame(draw);
@@ -37,11 +36,22 @@ const TestDemo: React.FC<{}> = () => {
   }
 
   useEffect(() => {
-    renderCanvas()
+    renderCanvas();
   }, []);
 
   return (
     <div className="test-demo">
+      {/* <div className="g-container">
+        <ul style={{ width: 1800 }}>
+          <li>Lorem ipsum 1111111</li>
+          <li>Lorem ipsum 2222222</li>
+          <li>Lorem ipsum 3333333</li>
+          <li>Lorem ipsum 4444444</li>
+          <li>Lorem ipsum 5555555</li>
+          <li>Lorem ipsum 6666666</li>
+          <li>Lorem ipsum 1111111</li>
+        </ul>
+      </div> */}
       <div className="title">自上而下的检测动画</div>
       <div className='test-img-box'>
         <img src='https://img.alicdn.com/imgextra/i2/O1CN01TW5oxK1Q5hF0xpl4L_!!6000000001925-0-tps-2000-1500.jpg' alt="" style={{ width: 400, height: 300 }} />
