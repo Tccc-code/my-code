@@ -22,5 +22,9 @@ export const Menus = [{
     key: 'test-demo',
     path: '/testDemo',
     label: '检测动画Demo'
+  }, {
+    key: 'domLine-demo',
+    path: '/domLineDemo',
+    label: '元素下划线Demo'
   }]
 }]
