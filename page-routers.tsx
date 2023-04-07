@@ -4,6 +4,7 @@ import LineDemo from "./src/contents/LineDemo/LineDemo";
 import SprayDemo from "./src/contents/SprayDemo/SprayDemo";
 import TestDemo from "./src/contents/TestDemo/TestDemo";
 import DomeLine from "./src/contents/DomeLine/DomeLine";
+import RubberBand from "./src/contents/RubberBandDemo/RubberBand";
 
 export const PageRouters = [{
   path: '/homePage',
@@ -23,4 +24,7 @@ export const PageRouters = [{
 }, {
   path: '/domLineDemo',
   element: DomeLine,
+}, {
+  path: '/rubberBandDemo',
+  element: RubberBand,
 }]
