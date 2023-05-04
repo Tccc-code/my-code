@@ -30,5 +30,9 @@ export const Menus = [{
     key: 'domLine-demo',
     path: '/domLineDemo',
     label: '元素下划线Demo'
+  }, {
+    key: 'little-skill',
+    path: '/littleskill',
+    label: '简单小技巧'
   }]
 }]
