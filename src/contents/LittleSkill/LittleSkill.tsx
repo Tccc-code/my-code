@@ -1,27 +1,15 @@
 import React, { useEffect, useState } from "react";
 import MonacoEditor from 'react-monaco-editor';
+import { notImplementEffectStr, getLatestStateStr } from './config.js'
 
 import './LittleSkill.scss';
 
 
 const LittleSkill: React.FC<{}> = () => {
-  const [mirrorData, setMirrorData] = useState('')
+  const [mirrorData, setMirrorData] = useState([])
 
   useEffect(() => {
-    setMirrorData(`
-// 首次渲染不执行的effect
-import { useEffect, useRef } from 'react';
-
-export default const useDidUpdateEffect = (fn: any, dependent: any) => {
-  const didMountRef = useRef(false);
-  useEffect(() => {
-    if (didMountRef.current) {
-      fn()
-    } else {
-      didMountRef.current = true;
-    }
-  }, dependent);
-};`)
+    setMirrorData([notImplementEffectStr, getLatestStateStr])
   }, [])
 
   const options = {
@@ -30,14 +18,22 @@ export default const useDidUpdateEffect = (fn: any, dependent: any) => {
   return (
     <div className="little-skill">
       <div className="title">简单小技巧</div>
-      <MonacoEditor
-        width="800"
-        height="300"
-        language="react"
-        theme="vs-dark"
-        value={mirrorData}
-        options={options}
-      />
+      <div className="content">
+        {
+          mirrorData.length > 0 && mirrorData?.map((elm) => {
+            return (
+              <MonacoEditor
+                width="700"
+                height="400"
+                language="react"
+                theme="vs-dark"
+                value={elm}
+                options={options}
+              />
+            )
+          })
+        }
+      </div>
     </div>
   );
 }
