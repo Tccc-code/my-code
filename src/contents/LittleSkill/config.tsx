@@ -1,4 +1,4 @@
-export const notImplementEffectStr = `
+export const notImplementEffectStr: string = `
     // 首次渲染不执行的effect
     import { useEffect, useRef } from 'react';
     
@@ -12,7 +12,7 @@ export const notImplementEffectStr = `
         }
       }, dependent);
     };`
-export const getLatestStateStr = `
+export const getLatestStateStr: string = `
     // 获取state最新值  解决state异步问题
     import { useState, useEffect, useRef } from 'react';
     

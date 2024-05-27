@@ -6,7 +6,7 @@ import './LittleSkill.scss';
 
 
 const LittleSkill: React.FC<{}> = () => {
-  const [mirrorData, setMirrorData] = useState([])
+  const [mirrorData, setMirrorData] = useState<Array<string>>([])
 
   useEffect(() => {
     setMirrorData([notImplementEffectStr, getLatestStateStr])

@@ -20,7 +20,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "ignoreDeprecations": "5.0"
   },
   "include": [
     "src"
